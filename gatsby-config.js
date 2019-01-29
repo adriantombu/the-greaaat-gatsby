@@ -20,16 +20,7 @@ module.exports = {
         path: `${__dirname}/src/data/freelances`
       }
     },
-    'gatsby-transformer-remark',
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/freelances": [ "Cache-Control: no-cache" ],
-          "/prestation/*": [ "Cache-Control: no-cache" ],
-        },
-      },
-    },
+    'gatsby-transformer-remark'
   ],
   mapping: {
     "MarkdownRemark.frontmatter.freelances": `MarkdownRemark.frontmatter.title`,
