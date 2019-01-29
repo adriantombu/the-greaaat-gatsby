@@ -1,18 +1,15 @@
 import React from 'react'
-import { withPrefix, Link } from 'gatsby'
+import { Link } from 'gatsby'
+
+import ImageRandom from './ImageRandom'
 
 export default ({ data }) => (
   <article className="freelance" key={data.slug}>
     <Link to={`/freelances/${data.slug}`} className="freelance__link media" title={data.title}>
       <div className="freelance__thumb-box">
-        <img
-          width="140"
-          height="140"
-          src={withPrefix(`freelances/${data.picture}`)}
-          className="circle freelance__thumb wp-post-image"
-          alt={data.title}
-        />
+        <ImageRandom imageData={data} />
       </div>
+
       <div className="freelance__text">
         <h2 className="h3-like freelance__title">{data.title}</h2>
         <h3 className="freelance__prestation">{data.position}</h3>
