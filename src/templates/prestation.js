@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from 'gatsby'
-// import shuffle from '@adriantombu/array-shuffle'
+import shuffle from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
@@ -8,7 +8,7 @@ import FreelancePreview from "../components/FreelancePreview";
 
 export default function Template({ data: { markdownRemark } }) {
   const { frontmatter, html } = markdownRemark
-  // const freelances = shuffle(frontmatter.freelances);
+  const freelances = shuffle(frontmatter.freelances);
 
   return (
     <Page bodyClass="freelances" title={frontmatter.title}>
@@ -25,7 +25,7 @@ export default function Template({ data: { markdownRemark } }) {
 
       <div className="freelance-box">
           <div className="wrapper">
-            { frontmatter.freelances.map(({ frontmatter }) => (
+            { freelances.map(({ frontmatter }) => (
               <FreelancePreview data={frontmatter} key={frontmatter.slug} />
             ))}
           </div>

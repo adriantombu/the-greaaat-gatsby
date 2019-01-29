@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-// import shuffle from '@adriantombu/array-shuffle'
+import shuffle from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
 import FreelancePreview from '../components/FreelancePreview'
 
-export default ({ data: { allMarkdownRemark: { edges: freelances }}}) => {
-  // const freelances = shuffle(edges)
+export default ({ data: { allMarkdownRemark: { edges }}}) => {
+  const freelances = shuffle(edges)
 
   return (
     <Page bodyClass="freelances" title="Les freelances">
