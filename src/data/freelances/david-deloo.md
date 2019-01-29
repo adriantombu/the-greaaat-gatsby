@@ -2,7 +2,7 @@
 title: David Deloo
 position: Intégrateur html / développeur front-end / développeur php
 city: Bretagne
-website: https://www.hellodeloo.com/
+website: https://www.hellodeloo.com
 facebook: xxx
 twitter: https://twitter.com/hellodeloo
 linkedin: https://fr.linkedin.com/in/hellodeloo
@@ -11,15 +11,15 @@ github: https://github.com/hellodeloo
 viadeo: xxx
 behance: xxx
 picture: david-deloo.jpg
-slug: david-deloo
-seoTitle: Intégrateur html, développeur front-end et web freelance
-seoDescription: Intégrateur html et développeur front-end et web freelance en Bretagne. Je travaille pour les agences, les annonceurs ou les particuliers.
+slug: david-deloo-integrateur-html-developpeur-front-end-bretagne
+seoTitle: Intégrateur html expert, développeur front-end et développeur php freelance
+seoDescription: Intégrateur html expert et développeur front-end et développeur web freelance en Bretagne. Je travaille pour les agences, les annonceurs et les start-ups.
 ---
 
-Après plus de 10 ans d’expérience en agence, je travaille désormais en tant que freelance. J’aide les agences et les annonceurs à créer des sites internet, des web apps, des opérations commerciales ou des campagnes de communication réussies. J’interviens de manière partielle ou globale à l’intégration, le développement et la maintenance de ces projets.
+<strong>Je suis intégrateur html expert, développeur front-end et développeur php.</strong>
 
-Attentif au respect des standards et des bonnes pratiques, j’intègre les sites internet, applications web, landing page, emailing ou bannières. J’utilise conjointement le Html, le Css, le JavaScript et le Responsive Web Design pour répondre aux besoins des utilisateurs en s’adaptant à leur largeur d’écran.
+Après plus de 10 ans d’expérience en agence, je travaille désormais en tant que freelance. J’aide les agences et les annonceurs à créer des sites internet, des applications web, des opérations commerciales ou des campagnes de communication réussies. J'interviens de manière partielle ou globale à l'intégration, le développement et la maintenance de ces projets.
 
-J’utilise notamment WordPress, WooCommerce ou Drupal pour concevoir le site web qui répondra à vos besoins. Je développe des sites vitrine, évènementiel, extranet, e-commerce, landing pages, web apps…
+Particulièrement attentif au respect des standards et aux problématiques de performances, j'intègre les sites internet, applications web ou newsletters pour tous les appareils, en utilisant les techniques du responsive web design.
 
-Je peux aussi prendre en main la maintenance, l’analyse et la correction des problèmes rencontrés. Proposer des optimisations et des évolutions fonctionnelles ou ergonomiques.
+Je travaille principalement avec les langages Php et JavaScript. J'utilise notamment WordPress, WooCommerce, Symfony ou encore Vue.js.
