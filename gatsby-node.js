@@ -3,8 +3,8 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  await createFreelancePages(createPage, graphql);
-  await createPrestationPages(createPage, graphql);
+  await createFreelancePages(createPage, graphql)
+  await createPrestationPages(createPage, graphql)
 }
 
 const createFreelancePages = async (createPage, graphql) => {
@@ -32,12 +32,12 @@ const createFreelancePages = async (createPage, graphql) => {
     }
   `)
 
-  freelances.data.allMarkdownRemark.edges.forEach(async ({ node }) => {
+  for (const data of freelances.data.allMarkdownRemark.edges) {
     const freelance = await graphql(`
       {
         markdownRemark(
           frontmatter: {
-            slug: {eq: "${node.frontmatter.slug}"}
+            slug: {eq: "${data.node.frontmatter.slug}"}
           }
         ) {
           html
@@ -63,13 +63,13 @@ const createFreelancePages = async (createPage, graphql) => {
     `)
 
     createPage({
-      path: `freelances/${node.frontmatter.slug}`,
+      path: `freelances/${data.node.frontmatter.slug}`,
       component: freelanceTemplate,
       context: {
         data: freelance.data.markdownRemark
       }
     })
-  })
+  }
 }
 
 const createPrestationPages = async (createPage, graphql) => {
@@ -97,12 +97,12 @@ const createPrestationPages = async (createPage, graphql) => {
     }
   `)
 
-  prestations.data.allMarkdownRemark.edges.forEach(async ({ node }) => {
+  for (const data of prestations.data.allMarkdownRemark.edges) {
     const prestation = await graphql(`
       {
         markdownRemark(
           frontmatter: {
-            slug: {eq: "${node.frontmatter.slug}"}
+            slug: {eq: "${data.node.frontmatter.slug}"}
           }
         ) {
           html
@@ -124,11 +124,11 @@ const createPrestationPages = async (createPage, graphql) => {
     `)
 
     createPage({
-      path: `prestation/${node.frontmatter.slug}`,
+      path: `prestation/${data.node.frontmatter.slug}`,
       component: prestationTemplate,
       context: {
         data: prestation.data.markdownRemark
       }
     })
-  })
+  }
 }

@@ -16,7 +16,7 @@ seoTitle: Développeur React et NodeJs à Toulouse
 seoDescription: Je suis développeur full-stack javascript, expert en développement d'applications web & mobile. Appelez moi au 09 72 57 45 15 et discutons de votre projet !
 ---
 
-**Je suis développeur web & mobile, spécialisé dans les technologies Javascript (React, React Native & NodeJs) et certifié expert en qualité web Opquast.**
+**Je suis développeur full-stack, spécialisé dans les technologies Javascript (React & NodeJs) et certifié expert en qualité web Opquast.**
 
 Travaillant en pleine campagne, je favorise exclusivement le télétravail.
 
