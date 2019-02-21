@@ -1,39 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Freelance from '../components/Freelance'
 
-export default function Template({ data: { markdownRemark } }) {
-  const { frontmatter, html } = markdownRemark
+export default function Template({ pageContext: { data } }) {
+  const { frontmatter, html } = data
 
   return <Freelance freelance={frontmatter} content={html} />
 }
-
-export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(
-      frontmatter: {
-        slug: { eq: $slug }
-      }
-    ) {
-      html
-      frontmatter {
-        title
-        position
-        city
-        website
-        facebook
-        twitter
-        linkedin
-        dribble
-        github
-        viadeo
-        behance
-        picture
-        slug
-        seoTitle
-        seoDescription
-      }
-    }
-  }
-`

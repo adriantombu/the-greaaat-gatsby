@@ -2,9 +2,13 @@ const path = require("path")
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  const freelanceTemplate = path.resolve(`src/templates/freelance.js`)
-  const prestationTemplate = path.resolve(`src/templates/prestation.js`)
 
+  await createFreelancePages(createPage, graphql);
+  await createPrestationPages(createPage, graphql);
+}
+
+const createFreelancePages = async (createPage, graphql) => {
+  const freelanceTemplate = path.resolve(`src/templates/freelance.js`)
   const freelances = await graphql(`
     {
       allMarkdownRemark(
@@ -27,16 +31,49 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-  freelances.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+  freelances.data.allMarkdownRemark.edges.forEach(async ({ node }) => {
+    const freelance = await graphql(`
+      {
+        markdownRemark(
+          frontmatter: {
+            slug: {eq: "${node.frontmatter.slug}"}
+          }
+        ) {
+          html
+          frontmatter {
+            title
+            position
+            city
+            website
+            facebook
+            twitter
+            linkedin
+            dribble
+            github
+            viadeo
+            behance
+            picture
+            slug
+            seoTitle
+            seoDescription
+          }
+        }
+      }
+    `)
+
     createPage({
       path: `freelances/${node.frontmatter.slug}`,
       component: freelanceTemplate,
       context: {
-        slug: node.frontmatter.slug
+        data: freelance.data.markdownRemark
       }
     })
   })
+}
 
+const createPrestationPages = async (createPage, graphql) => {
+  const prestationTemplate = path.resolve(`src/templates/prestation.js`)
   const prestations = await graphql(`
     {
       allMarkdownRemark(
@@ -59,12 +96,38 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-  prestations.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+  prestations.data.allMarkdownRemark.edges.forEach(async ({ node }) => {
+    const prestation = await graphql(`
+      {
+        markdownRemark(
+          frontmatter: {
+            slug: {eq: "${node.frontmatter.slug}"}
+          }
+        ) {
+          html
+          frontmatter {
+            title
+            slug
+            freelances {
+              frontmatter {
+                title
+                position
+                city
+                picture
+                slug
+              }
+            }
+          }
+        }
+      }
+    `)
+
     createPage({
       path: `prestation/${node.frontmatter.slug}`,
       component: prestationTemplate,
       context: {
-        slug: node.frontmatter.slug
+        data: prestation.data.markdownRemark
       }
     })
   })

@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { graphql } from 'gatsby'
 import shuffle from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
@@ -12,14 +11,14 @@ export default class Template extends Component {
   }
 
   componentDidMount() {
-    const cleaned = this.props.data.markdownRemark.frontmatter.freelances.map(f => f.frontmatter)
+    const cleaned = this.props.pageContext.data.frontmatter.freelances.map(f => f.frontmatter)
     const freelances = shuffle(cleaned)
 
     this.setState({ freelances })
   }
 
   render () {
-    const { data: { markdownRemark : { html, frontmatter: { title, slug }}} } = this.props
+    const { pageContext: { data: { html, frontmatter: { title, slug }}}} = this.props;
 
     return (
       <Page bodyClass="freelances" title={title}>
@@ -46,28 +45,3 @@ export default class Template extends Component {
     )
   }
 }
-
-export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(
-      frontmatter: {
-        slug: { eq: $slug }
-      }
-    ) {
-      html
-      frontmatter {
-        title
-        slug
-        freelances {
-          frontmatter {
-            title
-            position
-            city
-            picture
-            slug
-          }
-        }
-      }
-    }
-  }
-`

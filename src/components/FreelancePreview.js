@@ -10,6 +10,7 @@ export default ({ data }) => (
           height="140"
           src={withPrefix(`freelances/${data.picture}`)}
           className="circle freelance__thumb wp-post-image"
+          alt=""
         />
       </div>
 
