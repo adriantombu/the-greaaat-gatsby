@@ -1,5 +1,5 @@
 import React from 'react'
-import { withPrefix, Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 export default ({ data }) => (
   <article className="freelance" key={data.slug}>
@@ -10,9 +10,10 @@ export default ({ data }) => (
           height="140"
           src={withPrefix(`freelances/${data.picture}`)}
           className="circle freelance__thumb wp-post-image"
-          alt={data.title}
+          alt=""
         />
       </div>
+
       <div className="freelance__text">
         <h2 className="h3-like freelance__title">{data.title}</h2>
         <h3 className="freelance__prestation">{data.position}</h3>

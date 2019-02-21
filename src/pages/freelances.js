@@ -1,34 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-// import shuffle from '@adriantombu/array-shuffle'
+import shuffle from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
 import FreelancePreview from '../components/FreelancePreview'
 
-export default ({ data: { allMarkdownRemark: { edges: freelances }}}) => {
-  // const freelances = shuffle(edges)
+export default class Freelances extends Component {
+  state = {
+    freelances: []
+  }
 
-  return (
-    <Page bodyClass="freelances" title="Les freelances">
+  componentDidMount() {
+    const cleaned = this.props.data.allMarkdownRemark.edges.map(f => f.node.frontmatter)
+    const freelances = shuffle(cleaned)
 
-      <NavFreelance />
+    this.setState({ freelances })
+  }
 
-      <div className="wrapper">
-        <div className="pod-head">
-          <h1 className="pod-head__title">Les freelances</h1>
-        </div>
-      </div>
+  render () {
+    return (
+      <Page bodyClass="freelances" title="Les freelances">
 
-      <div className="freelance-box">
+        <NavFreelance />
+
         <div className="wrapper">
-          { freelances.map(({ node: { frontmatter }}) => (
-            <FreelancePreview data={frontmatter} key={frontmatter.slug} />
-          ))}
+          <div className="pod-head">
+            <h1 className="pod-head__title">Les freelances</h1>
+          </div>
         </div>
-      </div>
-    </Page>
-  )
+
+        <div className="freelance-box" style={{ minHeight: '350px' }}>
+          <div className="wrapper">
+            { this.state.freelances.map((freelance) => (
+              <FreelancePreview data={freelance} key={freelance.slug} />
+            ))}
+          </div>
+        </div>
+      </Page>
+    )
+  }
 }
 
 export const pageQuery = graphql`

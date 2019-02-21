@@ -1503,7 +1503,8 @@ tbody tr:nth-child(even) {
   border-radius: 50%;
   width: 8.75em;
   height: 8.75em;
-  margin-bottom: .71875em
+  margin-bottom: .71875em;
+  background: #fff;
 }
 
 .freelance__thumb-box:before {

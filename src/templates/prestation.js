@@ -1,61 +1,47 @@
-import React from "react"
-import { graphql } from 'gatsby'
-// import shuffle from '@adriantombu/array-shuffle'
+import React, { Component } from "react"
+import shuffle from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
 import FreelancePreview from "../components/FreelancePreview";
 
-export default function Template({ data: { markdownRemark } }) {
-  const { frontmatter, html } = markdownRemark
-  // const freelances = shuffle(frontmatter.freelances);
+export default class Template extends Component {
+  state = {
+    freelances: []
+  }
 
-  return (
-    <Page bodyClass="freelances" title={frontmatter.title}>
+  componentDidMount() {
+    const cleaned = this.props.pageContext.data.frontmatter.freelances.map(f => f.frontmatter)
+    const freelances = shuffle(cleaned)
 
-      <NavFreelance current={frontmatter.slug} />
+    this.setState({ freelances })
+  }
 
-      <div className="wrapper">
-        <div className="pod-head">
-          <h1 className="pod-head__title">{frontmatter.title}</h1>
+  render () {
+    const { pageContext: { data: { html, frontmatter: { title, slug }}}} = this.props;
 
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+    return (
+      <Page bodyClass="freelances" title={title}>
+
+        <NavFreelance current={slug} />
+
+        <div className="wrapper">
+          <div className="pod-head">
+            <h1 className="pod-head__title">{title}</h1>
+
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
         </div>
-      </div>
 
-      <div className="freelance-box">
+        <div className="freelance-box" style={{ minHeight: '350px' }}>
           <div className="wrapper">
-            { frontmatter.freelances.map(({ frontmatter }) => (
-              <FreelancePreview data={frontmatter} key={frontmatter.slug} />
+            { this.state.freelances.map((freelance) => (
+              <FreelancePreview data={freelance} key={freelance.slug} />
             ))}
           </div>
         </div>
 
-    </Page>
-  )
-}
-
-export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(
-      frontmatter: {
-        slug: { eq: $slug }
-      }
-    ) {
-      html
-      frontmatter {
-        title
-        slug
-        freelances {
-          frontmatter {
-            title
-            position
-            city
-            picture
-            slug
-          }
-        }
-      }
-    }
+      </Page>
+    )
   }
-`
+}
