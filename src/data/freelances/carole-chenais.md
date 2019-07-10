@@ -1,6 +1,6 @@
 ---
 title: Carole Chénais
-position: Communication | Rédaction | SEO | E-commerce | Sites vitrines | Graphisme
+position: SEO / E-COMMERCE / MARKETING / SOCIAL MEDIA MANAGEMENT / GRAPHISME
 city: Montauban & Toulouse
 website: http://www.seshat-communication.com/
 facebook: https://www.facebook.com/carole.chenais
@@ -17,20 +17,28 @@ seoDescription: De la stratégie éditoriale à la conception de visuels en pass
 ---
 
 **La communication au cœur de vos projets !**
-De la stratégie éditoriale à la conception de visuels en passant par la création de sites, je vous aide à booster votre activité.
 
-Mes domaines de compétences :
+➡ Mes prestations :
 
-* Amélioration de votre **référencement** via du SEO de qualité.
-* Définition de votre **stratégie marketing et éditoriale**.
-* Création de **logos et illustrations**.
-* Mise en place de sites vitrines via **WordPress** ou e-commerce via **Prestashop**.
-* Animation de votre communauté sur les **réseaux sociaux**.
+* Audits marketing & SEO
+* Stratégie éditoriale et rédaction
+* Illustrations et retouche d'images (Photoshop & Illustrator)
+* Social media management & community management
+* Création de sites vitrines & e-commerce (WordPress, Prestashop, WooCommerce, solution personnalisée)
 
-Ancienne responsable d’une boutique en ligne, le **e-commerce** me passionne. Que ce soit pour rendre vos **fiches articles** percutantes, pour être **bien référencé** et avoir toujours plus de visiteurs ou pour revoir la **communication visuelle** de votre boutique, je suis à votre service !
+➡ Mes spécialités :
 
-En tant que **rédactrice**, je sais m’adapter aux **différentes thématiques** qui me sont confiés. De l’art à la déco, des crypto-monnaies à des articles sur des sujets techniques/scientifiques, **je suis curieuse de tout** !
+* Blockchain & crypto-monnaies
+* Culture (je suis diplômée d'Histoire de l'Art)
+* Écologie
+* Décoration d'intérieur
+* Mode & secteur du luxe
 
-Mon petit truc en plus : mon **cursus d’historienne de l’art**, qui m’a donné l’occasion de travailler avec la **Métropole de Rouen** pour gérer la **communication** de ses huit musées.
+**Ma vision à 360° du web et de la communication est une véritable plus-value pour les missions qui me sont confiées !**
 
-**Une question, un projet ? Prenons le temps de discuter !**
+Ancienne responsable d’une boutique en ligne, le e-commerce me passionne.  
+Que ce soit pour rendre vos fiches articles percutantes, pour être bien référencé ou pour revoir la communication visuelle de votre boutique, je suis à votre service !
+
+Mon petit truc en plus : mon cursus d’historienne de l’art, qui m’a donné l’occasion de travailler avec la Métropole de Rouen pour gérer la communication de ses huit musées.
+
+**Mes compétences vous intéressent ? Discutons de votre projet !**
