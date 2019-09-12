@@ -24,10 +24,9 @@ Je garde toujours un contact agréable avec mes clients afin d’établir un cli
 
 Je travaille principalement sur les problématiques suivantes :
 
-* Magento
-* Ruby on rails (3 et 4)
-* Javascript (Angularjs et Backbone.js)
-* Développement PHP (Symfony 1.4 & 2.0 , Zend)
+* Magento 2
+* Ruby on rails
+* Javascript (Angularjs et Ionic)
 * HTML/CSS
 
 Tout mon code est toujours accompagné de tests unitaires et fonctionnels. Je m’efforce de produire un code toujours propre, bien documenté et maintenable. Je suis toujours à l’écoute de mes clients et je les conseille le mieux possible.
