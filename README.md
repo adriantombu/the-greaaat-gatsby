@@ -1,4 +1,4 @@
-# The Greaaat Gatsby
+# The Greaaat Gatsby [![](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen)](https://offset.earth/adrian)
 
 These are the files of the [Greaaat](http://greaaat.com/) website, powered by [Gatsby](https://www.gatsbyjs.org/) and hosted on [Netlify](https://www.netlify.com/)
 
