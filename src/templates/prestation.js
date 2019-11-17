@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import shuffle from '@adriantombu/array-shuffle'
+import { arrayShuffle } from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
@@ -12,7 +12,7 @@ export default class Template extends Component {
 
   componentDidMount() {
     const cleaned = this.props.pageContext.data.frontmatter.freelances.map(f => f.frontmatter)
-    const freelances = shuffle(cleaned)
+    const freelances = arrayShuffle(cleaned)
 
     this.setState({ freelances })
   }

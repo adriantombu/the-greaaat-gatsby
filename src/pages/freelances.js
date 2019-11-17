@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import shuffle from '@adriantombu/array-shuffle'
+import { arrayShuffle } from '@adriantombu/array-shuffle'
 
 import Page from '../components/Page'
 import NavFreelance from '../components/NavFreelance'
@@ -13,7 +13,7 @@ export default class Freelances extends Component {
 
   componentDidMount() {
     const cleaned = this.props.data.allMarkdownRemark.edges.map(f => f.node.frontmatter)
-    const freelances = shuffle(cleaned)
+    const freelances = arrayShuffle(cleaned)
 
     this.setState({ freelances })
   }
