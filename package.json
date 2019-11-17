@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "the-greaaat-gatsby",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "The website of the Greaaat freelance collective, running with Gatsby - https://greaaat.com/",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
-    "@adriantombu/array-shuffle": "^1.0.9",
+    "@adriantombu/array-shuffle": "^2.0.3",
     "gatsby": "^2.0.76",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-source-filesystem": "^2.0.16",
@@ -23,9 +23,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/adriantombu/the-greaaat-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/adriantombu/the-greaaat-gatsby/issues"
   }
 }
