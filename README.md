@@ -10,7 +10,7 @@ That's fairly easy if you know how to use Git ! If not, there's no shame at all,
 * Create a new git branch to work on your modifications
 * You can find the data of your profile in the `src/data/freelances` directory. As you can see, these are [Markdown files](https://www.markdownguide.org/) !
 * When you're happy with your changes, just commit your changes, push your branch and start a new pull request
-* Once your pull request has been approved and merged in the `master` branch, your modifications will be automagically deployed!
+* Once your pull request has been approved and merged in the `main` branch, your modifications will be automagically deployed!
 
 ## I don't have a profile page, how can I add one ?
 
@@ -25,7 +25,7 @@ For this you will need **a small text about yourself** and a **squared picture o
 * You can write your description in [Markdown format](https://www.markdownguide.org/) just under the `---` after the fields
 * When you're done with your profile page, go to the `src/data/prestations` directory, and open any of the file where you want to add your name. Georges Abitbol is a well reknown **Marketing Expert**, so he adds his name in the `freelances` field of the `experts-marketing.md` file.
 * When you're happy with your changes, just commit your changes, push your branch and start a new pull request
-* Once your pull request has been approved and merged in the `master` branch, your modifications will be automagically deployed!
+* Once your pull request has been approved and merged in the `main` branch, your modifications will be automagically deployed!
 
 ### What's the purpose of the fields on my profile
 
