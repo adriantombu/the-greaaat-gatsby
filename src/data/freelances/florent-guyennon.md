@@ -2,7 +2,7 @@
 title: Florent Guyennon
 position: Growth Hacking / Stratégie Marketing / Conseil en Innovation
 city: Paris
-website: xxx
+website: https://www.linkedin.com/in/florentguyennon/
 facebook: xxx
 twitter: xxx
 linkedin: https://www.linkedin.com/in/florentguyennon/
