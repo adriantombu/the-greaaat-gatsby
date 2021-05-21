@@ -2,7 +2,7 @@
 title: Pierre Sulpice
 position: Design Thinking & Gestion de projets techniques / Développeur Web / Interventions en grandes écoles & formateur
 city: Paris
-website: xxx
+website: https://www.linkedin.com/in/pierre-sulpice/
 facebook: xxx
 twitter: xxx
 linkedin: https://www.linkedin.com/in/pierre-sulpice/
