@@ -22,6 +22,7 @@ freelances:
     "Tony Trancard",
     "Xavier Carpentier",
     "Thibaud Duthoit",
+    "Pierre Sulpice",
   ]
 ---
 
